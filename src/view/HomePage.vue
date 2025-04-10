@@ -57,11 +57,11 @@
       </div>
     </div>
 
-    <!-- 您身边的IT专家 -->
+    <!-- 标语 slogan -->
     <div id="contactUs" class="container-fuild text-center">
       <div class="container contactUs-container wow slideInUp">
-        <h1>您身边的IT专家</h1>
-        <h3>7x24小时提供出色的IT服务</h3>
+        <h1>标语 slogan</h1>
+        <h3>7x24 小时提供出色的 IT 服务</h3>
         <button
           class="btn btn-default btn-sm"
           onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
@@ -184,9 +184,10 @@ import 'swiper/css/autoplay'
 import banner1 from '@/assets/img/banner1.png'
 import banner2 from '@/assets/img/banner2.jpg'
 
-import logo_hp from '@/assets/img/logo_hp.png'
-import logo_kk from '@/assets/img/logo_kk.png'
-import logo_toyota from '@/assets/img/logo_toyota.png'
+import ivisjp_logo from '@/assets/img/ivisjp_logo.jpg'
+import logo_hp from '@/assets/img/ivisjp_logo.jpg'
+import logo_kk from '@/assets/img/ivisjp_logo.jpg'
+import logo_toyota from '@/assets/img/ivisjp_logo.jpg'
 
 import img_tel from '@/assets/img/tel.png'
 import img_computer from '@/assets/img/computer.png'
@@ -196,23 +197,23 @@ import img_skill from '@/assets/img/skill.png'
 const swiperList = [
   {
     img: banner1,
-    title: '您身边的IT专家1',
-    content: '宣传简介您身边的IT专家1宣传简介您身边的IT专家1'
+    title: '标语 slogan1',
+    content: '宣传简介标语 slogan1 宣传简介标语 slogan1'
   },
   {
     img: banner2,
-    title: '您身边的IT专家2',
-    content: '宣传简介您身边的IT专家2宣传简介您身边的IT专家2'
+    title: '标语 slogan2',
+    content: '宣传简介标语 slogan2 宣传简介标语 slogan2'
   },
   {
     img: banner1,
-    title: '您身边的IT专家3',
-    content: '宣传简介您身边的IT专家3宣传简介您身边的IT专家3'
+    title: '标语 slogan3',
+    content: '宣传简介标语 slogan3 宣传简介标语 slogan3'
   },
   {
     img: banner2,
-    title: '您身边的IT专家4',
-    content: '宣传简介您身边的IT专家4宣传简介您身边的IT专家4'
+    title: '标语 slogan4',
+    content: '宣传简介标语 slogan4 宣传简介标语 slogan4'
   }
 ]
 
@@ -308,31 +309,31 @@ const customerList = [
 const serverList = [
   {
     logo: img_tel,
-    title: '核心优势1',
+    title: '核心优势 1',
     content: '<p>由专业客服提供人工服务</p>负责疑难问题和故障受理'
   },
   {
     logo: img_computer,
-    title: '核心优势2',
+    title: '核心优势 2',
     content: '<p>利用远程视频工具，提供协助</p>帮助客户进行调试、解决故障'
   },
   {
     logo: img_qq,
-    title: '核心优势3',
-    content: '<p>利用企业QQ提供在线解答</p>帮助企业快速准确解决问题和故障'
+    title: '核心优势 3',
+    content: '<p>利用企业 QQ 提供在线解答</p>帮助企业快速准确解决问题和故障'
   },
   {
     logo: img_skill,
-    title: '核心优势4',
+    title: '核心优势 4',
     content: '<p>由技术支持工程师，负责问题解答</p>需求受理及故障受理'
   }
 ]
 
-// const { proxy } = getCurrentInstance() //获取上下文实例，ctx=vue2的this
+// const { proxy } = getCurrentInstance() //获取上下文实例，ctx=vue2 的 this
 onMounted(() => {
   // console.log('mounted', proxy)
   // console.log(proxy.$wow, '------')
-  /* wowjs动画 */
+  /* wowjs 动画 */
   new WOW({
     boxClass: 'wow',
     animateClass: 'animated',
@@ -412,7 +413,7 @@ onMounted(() => {
   margin: 50px 0 20px;
 }
 
-/* 您身边的IT专家 */
+/* 标语 slogan */
 #contactUs {
   color: #fff;
   height: 400px;

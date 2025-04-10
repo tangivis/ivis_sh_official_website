@@ -5,7 +5,7 @@
     <div class="header-nav container hidden-xs">
       <!-- 导航 logo -->
       <div class="header-nav-logo">
-        <img src="@/assets/img/logo_black.png" />
+        <img src="@/assets/img/ivisjp_logo.jpg" />
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
@@ -36,7 +36,7 @@
       <div class="header-nav-m-logo">
         <img
           class="center-block"
-          src="@/assets/img/logo_black.png"
+          src="@/assets/img/ivisjp_logo.jpg"
           alt="logo"
         />
       </div>
