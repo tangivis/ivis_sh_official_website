@@ -1,0 +1,10 @@
+name = "ivis_sh_official_website"    # 替换为你的项目名称
+type = "javascript"           # 如果你使用 JavaScript / TypeScript 编写 Worker，保持此配置。其他情况请参见文档
+
+# Cloudflare 账户相关信息（必填）
+account_id = "440a7675a6efba21b8cbc4a5a80be845"  # 登录 Cloudflare 后，可在仪表盘中找到你的 Account ID
+workers_dev = true              # 是否部署到 workers.dev 子域名；如自定义域名可设置 false，再配置 route 与 zone_id
+
+# 如果你计划部署到自定义域名下（可选）
+# route = ""                      # 自定义路由，例如 "example.com/*"
+# zone_id = ""                    # 自定义域名对应的 Zone ID
