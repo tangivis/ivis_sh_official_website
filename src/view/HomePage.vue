@@ -40,16 +40,18 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6">
           <h2 class="bigData-title">
-            大数据管理系统
-            <small>/ Big Data Management System</small>
+            绳家枫钢束擦嘱浑蹄简出满适矩问壶靶啦
+            <small>/ Lorem ipsum dolor sit amet</small>
           </h2>
           <p>
-            当今最领先的响应式自助建站平台。无论您是普通互联网用户，还是专业网站制作人员，都能使用起飞页设计出最具专业水准的网站。想创建一个简单的单页式站点，还是一个专业的公司网站，亦或是一个别具一格的博客？起飞页可以满足您的所有需求。
+            同矩去与人才剧院参谋长想，改了一了。飞速的以中是、的根据知道提出地。巩固是灵活性所小经验。科学院做成的，换的呀的。都了能够下来，所以里面呢指示教材了？为物质地点器官上交从如！斗地类说出地表城市透明，也看造成黑色，不对漂亮之发现和一早的等着，的水平了！
           </p>
           <p>
-            我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户，还是专业网站制作人员。
+            党党络宋曼赫。胺耕佛鹿凑死剂走导险账岛唇。钨陆咸茧厚丢词丹孢菱感佩尤食归潭乖玛耦杭钉前牌男需。
+            压坏碗改劈晕姚功英世。我泊遣言遣鲤，谋宴洁三…柿薄。
+            蛇社甚浇蔡污蹈矾属铅磺喂求院贬喂简垃迈希遇银燕反脂幼造鳃戴炸淘裕振坦惧账项耽侨班畏芽际傍砧场隆泥旗潭俄毁昂躯占蛀伯墒栗？杏坚打启耐扳缆啊？
           </p>
-          <h2 class="bigData-device">PC/PAD/Phone &nbsp; 全设备支持</h2>
+          <h2 class="bigData-device">felis tempus volutpat &nbsp; 谨星逃腔墨证退蛄</h2>
           <a href="javascript:;" class="btn btn-lg btn-block btn-info"
             >联系我们</a
           >
@@ -61,7 +63,7 @@
     <div id="contactUs" class="container-fuild text-center">
       <div class="container contactUs-container wow slideInUp">
         <h1>标语 slogan</h1>
-        <h3>7x24 小时提供出色的 IT 服务</h3>
+        <h3></h3>
         <button
           class="btn btn-default btn-sm"
           onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
@@ -69,18 +71,18 @@
         >
           联系我们
         </button>
-        <div class="contactUs-contactWay">
+        <!-- <div class="contactUs-contactWay">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </div> -->
       </div>
     </div>
 
     <!-- 客户评价 -->
     <div id="customer" class="container-fuild">
       <div class="container customer-container">
-        <p class="customer-title text-center">客户评价</p>
+        <p class="customer-title text-center">漠版旬游京骄敏</p>
         <swiper
           class="swiper-container customer-swiper hidden-xs"
           :modules="modules"
@@ -138,8 +140,8 @@
     <div id="whyChooseUs" class="conatiner-fuild">
       <div class="container">
         <div class="whyChooseUs-title text-center">
-          <p>为什么选择我们的服务</p>
-          <p>THE REASON TO CHOOSING US</p>
+          <p>庇绘筛蛙并皇意衣</p>
+          <p>metus non iaculis imperdiet</p>
         </div>
         <div class="row">
           <div
@@ -149,16 +151,12 @@
           >
             <div
               class="server-block wow slideInUp"
-              onmouseenter="this.style.color='#28f';this.style.borderColor='#28f'"
-              onmouseleave="this.style.color='#666';this.style.borderColor='#ccc'"
             >
               <img class="center-block" :src="item.logo" alt="logo" />
               <p class="text-center">{{ item.title }}</p>
               <div
                 class="text-center"
                 v-html="item.content"
-                onmouseenter="this.style.color='#28f'"
-                onmouseleave="this.style.color='#ccc'"
               ></div>
             </div>
           </div>
@@ -236,55 +234,6 @@ const customerList = [
   },
   {
     logo: logo_toyota,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_kk,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_hp,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_toyota,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_kk,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_hp,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_toyota,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_hp,
     title:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
     content:
