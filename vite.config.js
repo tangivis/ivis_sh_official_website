@@ -6,7 +6,7 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/official-website/',
+  base: './',   // 修改这里为相对路径
   plugins: [
     vue(),
     inject({
@@ -17,7 +17,6 @@ export default defineConfig({
     createHtmlPlugin({
       /**
        * 需要注入 index.html ejs 模版的数据
-       * https://blog.csdn.net/SilenceJude/article/details/128297371
        */
       inject: {
         data: {
