@@ -1,30 +1,9 @@
 <template>
   <!-- 头部整体盒子 -->
   <div id="header" class="container-fuild">
-    <!-- 头部顶部 -->
-    <div class="header-top container-fuild hidden-xs">
-      <div class="container">
-        <div class="server pull-left">
-          <span class="glyphicon glyphicon-earphone"></span>{{ phone }}
-          <span class="glyphicon glyphicon-envelope"></span>{{ email }}
-          <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
-        </div>
-        <div class="shejiao pull-right">
-          <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！
-          <span class="glyphicon glyphicon-hand-left"></span>
-
-          <a
-            href="https://github.com/neveryu"
-            target="_blank"
-            style="color: #fc5531; font-size: 18px; cursor: pointer"
-            >Github</a
-          >
-        </div>
-      </div>
-    </div>
     <!-- 电脑导航 -->
     <div class="header-nav container hidden-xs">
-      <!-- 导航logo -->
+      <!-- 导航 logo -->
       <div class="header-nav-logo">
         <img src="@/assets/img/logo_black.png" />
       </div>
@@ -129,11 +108,6 @@ const navList = [
     children: []
   },
   {
-    name: '新闻动态',
-    path: '/newsinformation',
-    children: []
-  },
-  {
     name: '公司介绍',
     path: '/companyintroduction',
     children: []
@@ -188,7 +162,7 @@ function menuClick() {
   height: 110px;
 }
 
-/* 导航栏logo */
+/* 导航栏 logo */
 #header .header-nav .header-nav-logo {
   width: 100px;
   height: 100%;
@@ -196,7 +170,7 @@ function menuClick() {
   position: relative;
 }
 
-/* 导航栏logo图片 */
+/* 导航栏 logo 图片 */
 #header .header-nav .header-nav-logo img {
   width: 95px;
   height: 45px;
@@ -319,13 +293,13 @@ function menuClick() {
     position: relative;
   }
 
-  /* 导航栏logo容器 */
+  /* 导航栏 logo 容器 */
   #header .header-nav-m .header-nav-m-logo {
     height: 80px;
     position: relative;
   }
 
-  /* 导航栏logo图片 */
+  /* 导航栏 logo 图片 */
   #header .header-nav-m .header-nav-m-logo img {
     width: 95px;
     height: 45px;

@@ -8,7 +8,6 @@
       <p>地址：{{ address }}</p>
     </div>
     <div class="email_wx">
-      <p>博客：<a :href='blog + "neveryu/"' style="color:#fff">{{ blog }}</a></p>
       <p>邮箱：{{ email }}</p>
     </div>
     <p class="copy">Copyright &copy; 2018 - Now {{ company }}</p>
@@ -19,10 +18,7 @@
 const address = import.meta.env.VITE_APP_ADDRESS
 const phone = import.meta.env.VITE_APP_PHONE
 const email = import.meta.env.VITE_APP_EMAIL
-const qq = import.meta.env.VITE_APP_QQ
 const company = import.meta.env.VITE_APP_COMPANYNAME
-const blog = import.meta.env.VITE_APP_BLOG
-const qqgroup = import.meta.env.VITE_APP_QQGROUP
 </script>
 
 <style scoped>
