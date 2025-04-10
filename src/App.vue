@@ -5,13 +5,29 @@ import GoTop from '@/components/GoTop.vue'
 </script>
 
 <template>
-  <Header></Header>
-  <!-- 路由出口 -->
-  <!-- 路由匹配到的组件将渲染在这里 -->
-  <router-view></router-view>
-  <Footer></Footer>
-  <GoTop></GoTop>
+  <div class="layout">
+    <Header />
+
+    <main class="content">
+      <!-- 路由匹配到的组件将渲染在这里 -->
+      <router-view />
+    </main>
+
+    <Footer />
+    <GoTop />
+  </div>
 </template>
 
-<style scoped></style>
+<style>
+/* 外层布局容器，撑满整页高度 */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 至少和视口一样高 */
+}
 
+/* 主内容区域自动填充剩余空间 */
+.content {
+  flex: 1;
+}
+</style>

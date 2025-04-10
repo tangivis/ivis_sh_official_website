@@ -45,7 +45,7 @@ const serviceList = [
   },
   {
     id: 'section-2',
-    title: 'IT外包服务',
+    title: 'IT 外包服务',
     eng_title: 'Outsourcing',
     img: service2
   },
@@ -57,7 +57,7 @@ const serviceList = [
   },
   {
     id: 'section-4',
-    title: 'iOS应用定制开发',
+    title: 'iOS 应用定制开发',
     eng_title: 'iOS App Dev',
     img: service4
   }
@@ -142,9 +142,8 @@ onMounted(() => {
   transform: scale(1.1, 1.1);
 }
 .Service-item-wrapper:hover > .Service-item-border {
-  opacity: 1;
+  opacity: 0;
   width: 90%;
   height: 90%;
 }
 </style>
-

@@ -40,16 +40,18 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6">
           <h2 class="bigData-title">
-            大数据管理系统
-            <small>/ Big Data Management System</small>
+            绳家枫钢束擦嘱浑蹄简出满适矩问壶靶啦
+            <small>/ Lorem ipsum dolor sit amet</small>
           </h2>
           <p>
-            当今最领先的响应式自助建站平台。无论您是普通互联网用户，还是专业网站制作人员，都能使用起飞页设计出最具专业水准的网站。想创建一个简单的单页式站点，还是一个专业的公司网站，亦或是一个别具一格的博客？起飞页可以满足您的所有需求。
+            同矩去与人才剧院参谋长想，改了一了。飞速的以中是、的根据知道提出地。巩固是灵活性所小经验。科学院做成的，换的呀的。都了能够下来，所以里面呢指示教材了？为物质地点器官上交从如！斗地类说出地表城市透明，也看造成黑色，不对漂亮之发现和一早的等着，的水平了！
           </p>
           <p>
-            我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户，还是专业网站制作人员。
+            党党络宋曼赫。胺耕佛鹿凑死剂走导险账岛唇。钨陆咸茧厚丢词丹孢菱感佩尤食归潭乖玛耦杭钉前牌男需。
+            压坏碗改劈晕姚功英世。我泊遣言遣鲤，谋宴洁三…柿薄。
+            蛇社甚浇蔡污蹈矾属铅磺喂求院贬喂简垃迈希遇银燕反脂幼造鳃戴炸淘裕振坦惧账项耽侨班畏芽际傍砧场隆泥旗潭俄毁昂躯占蛀伯墒栗？杏坚打启耐扳缆啊？
           </p>
-          <h2 class="bigData-device">PC/PAD/Phone &nbsp; 全设备支持</h2>
+          <h2 class="bigData-device">felis tempus volutpat &nbsp; 谨星逃腔墨证退蛄</h2>
           <a href="javascript:;" class="btn btn-lg btn-block btn-info"
             >联系我们</a
           >
@@ -57,11 +59,11 @@
       </div>
     </div>
 
-    <!-- 您身边的IT专家 -->
+    <!-- 标语 slogan -->
     <div id="contactUs" class="container-fuild text-center">
       <div class="container contactUs-container wow slideInUp">
-        <h1>您身边的IT专家</h1>
-        <h3>7x24小时提供出色的IT服务</h3>
+        <h1>标语 slogan</h1>
+        <h3></h3>
         <button
           class="btn btn-default btn-sm"
           onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
@@ -69,18 +71,18 @@
         >
           联系我们
         </button>
-        <div class="contactUs-contactWay">
+        <!-- <div class="contactUs-contactWay">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </div> -->
       </div>
     </div>
 
     <!-- 客户评价 -->
     <div id="customer" class="container-fuild">
       <div class="container customer-container">
-        <p class="customer-title text-center">客户评价</p>
+        <p class="customer-title text-center">漠版旬游京骄敏</p>
         <swiper
           class="swiper-container customer-swiper hidden-xs"
           :modules="modules"
@@ -138,8 +140,8 @@
     <div id="whyChooseUs" class="conatiner-fuild">
       <div class="container">
         <div class="whyChooseUs-title text-center">
-          <p>为什么选择我们的服务</p>
-          <p>THE REASON TO CHOOSING US</p>
+          <p>庇绘筛蛙并皇意衣</p>
+          <p>metus non iaculis imperdiet</p>
         </div>
         <div class="row">
           <div
@@ -149,16 +151,12 @@
           >
             <div
               class="server-block wow slideInUp"
-              onmouseenter="this.style.color='#28f';this.style.borderColor='#28f'"
-              onmouseleave="this.style.color='#666';this.style.borderColor='#ccc'"
             >
               <img class="center-block" :src="item.logo" alt="logo" />
               <p class="text-center">{{ item.title }}</p>
               <div
                 class="text-center"
                 v-html="item.content"
-                onmouseenter="this.style.color='#28f'"
-                onmouseleave="this.style.color='#ccc'"
               ></div>
             </div>
           </div>
@@ -184,9 +182,10 @@ import 'swiper/css/autoplay'
 import banner1 from '@/assets/img/banner1.png'
 import banner2 from '@/assets/img/banner2.jpg'
 
-import logo_hp from '@/assets/img/logo_hp.png'
-import logo_kk from '@/assets/img/logo_kk.png'
-import logo_toyota from '@/assets/img/logo_toyota.png'
+import ivisjp_logo from '@/assets/img/ivisjp_logo.jpg'
+import logo_hp from '@/assets/img/ivisjp_logo.jpg'
+import logo_kk from '@/assets/img/ivisjp_logo.jpg'
+import logo_toyota from '@/assets/img/ivisjp_logo.jpg'
 
 import img_tel from '@/assets/img/tel.png'
 import img_computer from '@/assets/img/computer.png'
@@ -196,23 +195,23 @@ import img_skill from '@/assets/img/skill.png'
 const swiperList = [
   {
     img: banner1,
-    title: '您身边的IT专家1',
-    content: '宣传简介您身边的IT专家1宣传简介您身边的IT专家1'
+    title: '标语 slogan1',
+    content: '宣传简介标语 slogan1 宣传简介标语 slogan1'
   },
   {
     img: banner2,
-    title: '您身边的IT专家2',
-    content: '宣传简介您身边的IT专家2宣传简介您身边的IT专家2'
+    title: '标语 slogan2',
+    content: '宣传简介标语 slogan2 宣传简介标语 slogan2'
   },
   {
     img: banner1,
-    title: '您身边的IT专家3',
-    content: '宣传简介您身边的IT专家3宣传简介您身边的IT专家3'
+    title: '标语 slogan3',
+    content: '宣传简介标语 slogan3 宣传简介标语 slogan3'
   },
   {
     img: banner2,
-    title: '您身边的IT专家4',
-    content: '宣传简介您身边的IT专家4宣传简介您身边的IT专家4'
+    title: '标语 slogan4',
+    content: '宣传简介标语 slogan4 宣传简介标语 slogan4'
   }
 ]
 
@@ -253,86 +252,37 @@ const customerList = [
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
     content:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_toyota,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_kk,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_hp,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_toyota,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_hp,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_kk,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
-  },
-  {
-    logo: logo_hp,
-    title:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
-    content:
-      '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
   }
 ]
 
 const serverList = [
   {
     logo: img_tel,
-    title: '核心优势1',
+    title: '核心优势 1',
     content: '<p>由专业客服提供人工服务</p>负责疑难问题和故障受理'
   },
   {
     logo: img_computer,
-    title: '核心优势2',
+    title: '核心优势 2',
     content: '<p>利用远程视频工具，提供协助</p>帮助客户进行调试、解决故障'
   },
   {
     logo: img_qq,
-    title: '核心优势3',
-    content: '<p>利用企业QQ提供在线解答</p>帮助企业快速准确解决问题和故障'
+    title: '核心优势 3',
+    content: '<p>利用企业 QQ 提供在线解答</p>帮助企业快速准确解决问题和故障'
   },
   {
     logo: img_skill,
-    title: '核心优势4',
+    title: '核心优势 4',
     content: '<p>由技术支持工程师，负责问题解答</p>需求受理及故障受理'
   }
 ]
 
-// const { proxy } = getCurrentInstance() //获取上下文实例，ctx=vue2的this
+// const { proxy } = getCurrentInstance() //获取上下文实例，ctx=vue2 的 this
 onMounted(() => {
   // console.log('mounted', proxy)
   // console.log(proxy.$wow, '------')
-  /* wowjs动画 */
+  /* wowjs 动画 */
   new WOW({
     boxClass: 'wow',
     animateClass: 'animated',
@@ -412,7 +362,7 @@ onMounted(() => {
   margin: 50px 0 20px;
 }
 
-/* 您身边的IT专家 */
+/* 标语 slogan */
 #contactUs {
   color: #fff;
   height: 400px;
