@@ -1,16 +1,15 @@
 <template>
   <div id="footer" class="container-fluid">
     <div class="logo">
-      <img src="@/assets/img/logo_white.png" alt="logo图" />
+      <img src="@/assets/img/ivisjp_logo.jpg" alt="logo图" />
     </div>
-    <p class="title">公司企业网站模板</p>
     <div class="address_tel_fax">
       <p>地址：{{ address }}</p>
     </div>
     <div class="email_wx">
       <p>邮箱：{{ email }}</p>
     </div>
-    <p class="copy">Copyright &copy; 2018 - Now {{ company }}</p>
+    <p class="copy">Copyright &copy; 2025 {{ company }}</p>
   </div>
 </template>
 
@@ -35,6 +34,9 @@ const company = import.meta.env.VITE_APP_COMPANYNAME
   width: 95px;
   height: 45px;
   margin: 50px auto 20px;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中（如果有固定高度时） */
 }
 
 .title {
