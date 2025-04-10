@@ -103,9 +103,7 @@
             <div class="customer-logo">
               <img class="center-block" :src="item.logo" alt="logo" />
             </div>
-            <div class="customer-yh">
-              <img src="@/assets/img/yinhao.png" alt="引号" />
-            </div>
+
             <div class="customer-content1">
               <small>{{ item.content }}</small>
             </div>
@@ -122,9 +120,7 @@
             <div class="customer-logo">
               <img class="center-block" :src="item.logo" alt="logo" />
             </div>
-            <div class="customer-yh">
-              <img src="@/assets/img/yinhao.png" alt="引号" />
-            </div>
+
             <div class="customer-content1">
               <small>{{ item.content }}</small>
             </div>
@@ -423,9 +419,7 @@ onMounted(() => {
 }
 
 #customer .customer-logo img {
-  width: 94px;
   height: 94px;
-  border: 1px solid #ccc;
 }
 
 #customer .customer-yh img {
@@ -435,7 +429,7 @@ onMounted(() => {
 
 #customer .customer-content1 {
   padding-bottom: 20px;
-  border-bottom: 1px solid #0ce9f1;
+  border-bottom: 1px solid #000000;
 }
 
 #customer .customer-content2 {
@@ -541,7 +535,6 @@ onMounted(() => {
   }
 
   #customer .customer-logo img {
-    width: 48px;
     height: 48px;
   }
 
@@ -645,4 +638,3 @@ onMounted(() => {
   }
 }
 </style>
-
