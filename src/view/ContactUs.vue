@@ -11,6 +11,13 @@
       <div class="contact-item">
         <i class="fas fa-map-marker-alt"></i>
         <div class="contact-detail address-line">
+          <span>公司名称:</span>
+          {{ company }}
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="contact-detail address-line">
           <span>公司地址:</span>
           {{ address }}
         </div>
@@ -41,6 +48,7 @@
 </template>
 
 <script setup>
+const company = import.meta.env.VITE_APP_COMPANYNAME
 const address = import.meta.env.VITE_APP_ADDRESS
 const phone = import.meta.env.VITE_APP_PHONE
 const email = import.meta.env.VITE_APP_EMAIL
