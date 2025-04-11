@@ -3,12 +3,6 @@
     <div class="logo">
       <img src="@/assets/img/ivisjp_logo.jpg" alt="logo图" />
     </div>
-    <div class="address_tel_fax">
-      <p>地址：{{ address }}</p>
-    </div>
-    <div class="email_wx">
-      <p>邮箱：{{ email }}</p>
-    </div>
     <p class="copy">Copyright &copy; 2025 {{ company }}</p>
   </div>
 </template>

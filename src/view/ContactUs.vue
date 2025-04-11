@@ -1,117 +1,162 @@
 <template>
   <div id="ContactUs">
-    <div class="banner container-fuild text-center">联系我们</div>
-    <div class="container">
-      <div class="container-fuild ContactUs-container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <form class="form-horizontal" role="form">
-              <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">姓名</label>
-                <div class="col-sm-10 col-xs-12">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="请输入名字"
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">邮箱</label>
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="email"
-                    placeholder="请输入邮箱"
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="tel" class="col-sm-2 control-label">电话</label>
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="tel"
-                    placeholder="请输入电话"
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="content" class="col-sm-2 control-label">内容</label>
-                <div class="col-sm-10">
-                  <textarea
-                    class="form-control"
-                    id="content"
-                    rows="8"
-                    placeholder="请输入内容"
-                  ></textarea>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button
-                    class="btn btn-default btn-block"
-                    @click.stop="submitForm"
-                  >
-                    提交
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <div id="map" class="wow zoomIn"></div>
-          </div>
+    <!-- 顶部 Banner 区域 -->
+    <div class="header">
+      <h1>联系我们</h1>
+      <p>欢迎您随时联系我们，期待与您合作！</p>
+    </div>
+
+    <!-- 联系信息区域 -->
+    <div class="contact-container">
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="contact-detail">
+          <span>公司地址</span>
+          {{ address }}
         </div>
       </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <div class="contact-detail">
+          <span>联系电话</span>
+          {{ phone }}
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <div class="contact-detail">
+          <span>电子邮箱</span>
+          {{ email }}
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-globe"></i>
+        <div class="contact-detail">
+          <span>官方网站</span>
+          www.ivis-sh.com
+        </div>
+      </div>
+      <!-- 社交媒体链接，可根据需要删除或修改 -->
+      <!-- <div class="social">
+        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+      </div> -->
     </div>
   </div>
 </template>
-<script setup name="ContactUs">
-import WOW from 'wow.js'
-import { onMounted } from 'vue'
-onMounted(() => {
-})
-function submitForm() {
-  window.open(
-    'https://neveryu.github.io/web-bookmarks/interview/',
-    'web-bookmarks'
-  )
-}
+
+<script setup>
+// 该组件无需业务逻辑，只用于展示联系信息
+const address = import.meta.env.VITE_APP_ADDRESS
+const phone = import.meta.env.VITE_APP_PHONE
+const email = import.meta.env.VITE_APP_EMAIL
 </script>
 
 <style scoped>
-.banner {
-  color: #fff;
-  font-size: 30px;
-  height: 150px;
-  line-height: 150px;
-  background-image: url('../assets/img/banner_1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll;
-  background-position: center center;
-}
-.ContactUs-container {
-  padding: 80px 0;
-  transition: all ease 0.5s;
+/* 基本重置 */
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-#map {
-  width: 100%;
-  height: 365px;
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
 }
-.row {
-  margin-right: 0;
-  margin-left: 0;
+
+/* 顶部 Banner 样式 */
+.header {
+  background: url('@/assets/img/banner_1.jpg') center center / cover no-repeat;
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
 }
-@media screen and (max-width: 997px) {
-  .ContactUs-container {
-    padding: 20px 0;
+
+.header h1 {
+  font-size: 48px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* 联系信息容器 */
+.contact-container {
+  max-width: 800px;
+  background: #fff;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 每行一条联系信息 */
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-item i {
+  font-size: 40px;
+  width: 60px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.contact-detail {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.contact-detail span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* 社交链接 */
+.social {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.social a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  background: #2c3e50;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.social a:hover {
+  background: #1a242f;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .contact-detail {
+    font-size: 18px;
   }
 }
 </style>
-
