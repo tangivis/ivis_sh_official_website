@@ -86,7 +86,7 @@
         <!-- 固定背景的包裹层 -->
         <div class="customer-wrapper">
           <swiper
-            class="swiper-container customer-swiper hidden-xs"
+            class="swiper-container customer-swiper"
             :modules="modules"
             :slides-per-view="1"
             :space-between="0"
@@ -146,7 +146,6 @@
 <script setup name="HomePage">
 import WOW from 'wow.js'
 import { getCurrentInstance, onMounted } from 'vue'
-// import Swiper from 'swiper'
 import { Navigation, Pagination, Scrollbar, A11y, Lazy, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
@@ -396,7 +395,7 @@ onMounted(() => {
 /* 添加一个固定背景的容器 */
 .customer-wrapper {
   background: #fff;       /* 固定白色背景 */
-  padding: 30px 80px;     /* 内边距，根据需要调整 */
+  padding: 30px 30px;     /* 内边距，根据需要调整 */
   min-height: 200px;      /* 设置最小高度，保证背景显示 */
 }
 
@@ -507,12 +506,6 @@ onMounted(() => {
     height: 28px;
     margin: 10px;
   }
-
-  /* #customer {
-    padding: 30px 0;
-    box-sizing: border-box;
-    background: #fff;
-  } */
 
   #customer .customer-title {
     font-size: 16px;
