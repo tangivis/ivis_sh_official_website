@@ -4,42 +4,54 @@
     <div class="container">
       <div class="JobChance-container wow pulse">
         <h2>招聘信息</h2>
-        <p>岗位职责</p>
+
+        <h3>招聘人数</h3>
+        <ul>
+          <li>IVIS日本总公司招聘：20名</li>
+          <li>IVIS上海子公司招聘：5名</li>
+        </ul>
+
+        <h3>招聘对象</h3>
+        <p>
+          2024年应届毕业的本科生和研究生，毕业于国内一流大学，拥有一本及以上学历，
+          主修计算机科学或相关专业。具备日语基础者优先考虑。
+        </p>
+
+        <h3>工作地点</h3>
+        <ul>
+          <li>前期语言培训在上海进行。</li>
+          <li>后期技术相关培训和具体工作地点在日本。</li>
+        </ul>
+
+        <h3>工作内容</h3>
         <ol>
-          <li>负责公司产品及项目系统的功能开发、代码优化；</li>
-          <li>负责项目组人员任务的分配与监督，及时解决项目技术问题；</li>
-          <li>
-            参与系统需求分析与设计，并负责完成 PHP 核心代码，接口规范制定，架构设计。
-          </li>
+          <li>负责软件产品的开发与维护，确保代码质量和系统稳定性。</li>
+          <li>参与系统设计，包括功能设计和数据库设计，确保架构的合理性。</li>
+          <li>与团队合作，完成模块测试，并协助解决开发过程中的技术问题。</li>
+          <li>日语基础有无皆可，愿意接受公司提供的日语培训，并通过相关考核。</li>
+          <li>根据项目需求，接受在日本的工作安排，适应跨文化工作环境。</li>
         </ol>
-        <p>任职要求</p>
+
+        <h3>任职要求</h3>
         <ol>
-          <li>
-            精通 PHP+MySql+Apache 开发，精通使用 JavaScript、AJAX、JQuery 等技术；3 年以上 WEB 应用程序开发经验，
-            有大型网站或电子商务网站工作经验者优先；
-          </li>
-          <li>熟悉 jQuery，具有 AJAX、HTML、CSS、JAVASCRIPT 等方面的开发经验；</li>
-          <li>
-            熟悉 PHP 模板技术、框架技术及设计模式，有 php 框架系统进行开发经验者优先，如：phpcms，dedecms 等；
-          </li>
-          <li>
-            精通数据库原理，精通 MYSQL、了解 Mongo 等并有相关关系数据库设计开发经验，
-            了解 Mysql 的数据库配置管理、性能优化；
-          </li>
-          <li>
-            熟悉常见的数据结构和算法，具备良好的编程习惯及较强的文档编写能力；
-          </li>
-          <li>熟悉各种 WEB 缓存技术，熟悉大型网站构架和性能优化；</li>
-          <li>
-            对网站系统架构的部署、搭建、优化、排错等方面有丰富经验，对高负载、大访问量情况下的系统架构有经验者优先。
-          </li>
+          <li>熟练使用 Java 或 Python，具备 Spring、SpringCloud 等框架的应用经验者优先。</li>
+          <li>熟悉 SQL Server 或 PostgreSQL 数据库，能够进行数据库设计和优化。</li>
+          <li>具备良好的团队合作和沟通能力，能够指导和协调团队成员的工作。</li>
+          <li>具备计算机科学或相关专业的学历背景，愿意接受技术培训和能力提升。</li>
+          <li>能够接受工作地点在日本，具备良好的跨文化沟通能力和团队合作精神。</li>
         </ol>
-        <button
-          class="center-block btn btn-warning btn-lg"
-          @click.stop="submitForm"
-        >
+
+        <h3>福利待遇</h3>
+        <ul>
+          <li>具有竞争力的薪资和福利待遇。（与日本员工同等薪资待遇）</li>
+          <li>正式入职后享受与日本员工同等的社保、医保等一系列福利待遇。</li>
+          <li>前往日本工作的机会，体验丰富的跨文化工作环境。</li>
+          <li>充满活力的团队和开放的工作氛围。</li>
+        </ul>
+
+        <!-- <button class="center-block btn btn-warning btn-lg" @click.stop="submitForm">
           投递简历
-        </button>
+        </button> -->
       </div>
     </div>
   </div>
@@ -49,11 +61,16 @@
 import WOW from 'wow.js'
 import { onMounted } from 'vue'
 onMounted(() => {
-  let wow = new WOW()
-  wow.init()
+  new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+  }).init()
 })
 function submitForm() {
-  window.open('https://neveryu.github.io/neveryu/', 'NeverYu')
+  window.open('', '')
 }
 </script>
 
@@ -68,37 +85,63 @@ function submitForm() {
   background-size: cover;
   background-attachment: scroll;
   background-position: center center;
+  text-align: center;
 }
+
 .JobChance-container {
   margin: 100px;
   padding: 30px;
-  transition: all ease 0.5s;
+  transition: all 0.5s ease;
   border: 1px dashed salmon;
+  background: #fff;
+  border-radius: 12px;
 }
+
 .JobChance-container h2 {
   color: rgb(255, 102, 19);
   font-weight: bolder;
   text-align: center;
+  margin-bottom: 20px;
 }
-.JobChance-container p {
+
+.JobChance-container h3 {
   font-size: 20px;
   color: rgb(255, 102, 19);
   font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
-.JobChance-container ol {
-  list-style-type: decimal;
-  padding-left: 30px;
+
+.JobChance-container p {
+  font-size: 16px;
+  margin: 10px 0 20px;
+  line-height: 1.6;
 }
-.JobChance-container ol > li {
+
+.JobChance-container ol,
+.JobChance-container ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.JobChance-container li {
   font-size: 14px;
-  line-height: 2.7rem;
+  line-height: 2.2;
+  margin-bottom: 10px;
 }
+
+.center-block {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 响应式调整 */
 @media screen and (max-width: 997px) {
   .JobChance-container {
-    margin: 20px 0;
+    margin: 20px;
     padding: 20px;
     border: 1px dashed salmon;
   }
 }
 </style>
-
