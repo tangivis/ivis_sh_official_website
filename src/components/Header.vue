@@ -63,10 +63,34 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, reactive, watch, onMounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
+const route = useRoute()
+
+function updateNavFromRoute() {
+  // 根据当前 route.path 匹配 navList 中的项
+  const index = navList.findIndex(item => item.path === route.path)
+  if (index !== -1) {
+    navIndex.value = index
+    menuName.value = navList[index].name
+    sessionStorage.setItem('navIndex', index)
+  }
+}
+
+// 初始化时调用
+onMounted(() => {
+  updateNavFromRoute()
+})
+
+// 监听路由变化，更新 navIndex
+watch(
+  () => route.path,
+  (newPath, oldPath) => {
+    updateNavFromRoute()
+  }
+)
 
 const navIndex = ref(sessionStorage.getItem('navIndex') ?? 0)
 const menuName = ref('首页')
