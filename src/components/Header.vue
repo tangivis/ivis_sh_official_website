@@ -13,19 +13,15 @@
           v-for="(item, index) in navList"
           :key="index"
           :class="index == navIndex ? 'active' : ''"
-          @click="navClick(index, item.name)"
+          @click="navClick(index, item.name, item.path)"
         >
-          <router-link :to="item.path">
-            {{ item.name }}
-            <span
-              v-if="item.children.length > 0"
-              class="glyphicon glyphicon-menu-down"
-            ></span>
-            <i class="underline"></i>
-          </router-link>
+          <span class="nav-text">{{ item.name }}</span>
+          <span v-if="item.children.length > 0" class="glyphicon glyphicon-menu-down"></span>
+          <i class="underline"></i>
+          <!-- 二级导航：点击子菜单时阻止 li 的点击 -->
           <dl v-if="item.children.length > 0">
-            <dt v-for="(i, n) in item.children" :key="n">
-              <router-link :to="i.path">{{ i.name }}</router-link>
+            <dt v-for="(child, n) in item.children" :key="n">
+              <span @click.stop="navClickChild(child.path)">{{ child.name }}</span>
             </dt>
           </dl>
         </li>
@@ -295,6 +291,42 @@ function menuClick() {
 #header .header-nav .header-nav-wrapper > li > dl > dt:hover {
   cursor: pointer;
   background: #ccc;
+}
+
+/* 针对 li 内部的下划线 */
+#header .header-nav .header-nav-wrapper > li .underline {
+  display: block;
+  position: absolute;
+  bottom: 18px;   /* 调整这里：将 -2px 改为 0，或根据需要调整为 -1px 等 */
+  left: 50%;
+  width: 0;
+  height: 2px;
+  opacity: 0;
+  transition: all 0.6s ease;
+  background-color: #1e73be;
+}
+
+/* 鼠标悬停时（或处于 active 状态）显示下划线 */
+#header .header-nav .header-nav-wrapper > li:hover .underline,
+#header .header-nav .header-nav-wrapper > li.active .underline {
+  opacity: 1;
+  width: 100%;
+  left: 0;
+}
+
+/* 同时确保 li 内显示文本的 span 的样式 */
+#header .header-nav .header-nav-wrapper > li .nav-text {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 15px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+/* 鼠标悬停时改变文字颜色 */
+#header .header-nav .header-nav-wrapper > li:hover .nav-text {
+  color: #1e73be;
 }
 
 @media screen and (max-width: 997px) {
