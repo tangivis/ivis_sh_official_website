@@ -11,29 +11,29 @@
       <div class="contact-item">
         <i class="fas fa-map-marker-alt"></i>
         <div class="contact-detail">
-          <span>公司地址</span>
+          <span>公司地址:</span>
           {{ address }}
         </div>
       </div>
       <div class="contact-item">
         <i class="fas fa-phone-alt"></i>
         <div class="contact-detail">
-          <span>联系电话</span>
+          <span>联系电话:</span>
           {{ phone }}
         </div>
       </div>
       <div class="contact-item">
         <i class="fas fa-envelope"></i>
         <div class="contact-detail">
-          <span>电子邮箱</span>
+          <span>电子邮箱:</span>
           {{ email }}
         </div>
       </div>
       <div class="contact-item">
-        <i class="fas fa-globe"></i>
+        <i class="fas fa-clock"></i>
         <div class="contact-detail">
-          <span>官方网站</span>
-          www.ivis-sh.com
+          <span>工作时间:</span>
+          周一至周五 9:00 - 18:00
         </div>
       </div>
       <!-- 社交媒体链接，可根据需要删除或修改 -->
@@ -90,9 +90,9 @@ body {
 .contact-container {
   max-width: 800px;
   background: #fff;
-  margin: 40px auto;
-  padding: 40px;
-  border-radius: 10px;
+  margin: 60px auto;
+  /* padding: 30px; */
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
