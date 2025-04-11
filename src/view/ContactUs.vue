@@ -10,7 +10,7 @@
     <div class="contact-container">
       <div class="contact-item">
         <i class="fas fa-map-marker-alt"></i>
-        <div class="contact-detail">
+        <div class="contact-detail address-line">
           <span>公司地址:</span>
           {{ address }}
         </div>
@@ -36,19 +36,11 @@
           周一至周五 9:00 - 18:00
         </div>
       </div>
-      <!-- 社交媒体链接，可根据需要删除或修改 -->
-      <!-- <div class="social">
-        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-      </div> -->
     </div>
   </div>
 </template>
 
 <script setup>
-// 该组件无需业务逻辑，只用于展示联系信息
 const address = import.meta.env.VITE_APP_ADDRESS
 const phone = import.meta.env.VITE_APP_PHONE
 const email = import.meta.env.VITE_APP_EMAIL
@@ -91,7 +83,7 @@ body {
   max-width: 800px;
   background: #fff;
   margin: 60px auto;
-  /* padding: 30px; */
+  padding: 30px; /* 恢复内边距，让左右留出空隙 */
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -102,6 +94,9 @@ body {
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
+  /* 左对齐 */
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .contact-item:last-child {
@@ -121,42 +116,51 @@ body {
   line-height: 1.4;
 }
 
+/* 单行显示地址，如地址太长可以解开下面注释： */
+/*
+.address-line {
+  white-space: nowrap;       // 强制单行
+  overflow: hidden;          // 超出隐藏
+  text-overflow: ellipsis;   // 文字省略
+  display: block;            // 保证 ellipsis 生效
+}
+*/
+
 .contact-detail span {
   display: block;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-/* 社交链接 */
-.social {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.social a {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 10px;
-  background: #2c3e50;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 20px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.social a:hover {
-  background: #1a242f;
-}
-
 /* 响应式调整 */
 @media (max-width: 768px) {
+  /* 让 Banner 在小屏下更紧凑 */
   .header h1 {
     font-size: 36px;
   }
 
+  .header p {
+    font-size: 16px;
+  }
+
+  /* 减小联系信息容器的内边距 */
+  .contact-container {
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  /* 调整字体和图标大小 */
+  .contact-item {
+    padding: 15px 0;
+  }
+
+  .contact-item i {
+    font-size: 28px;
+    width: 40px;
+  }
+
   .contact-detail {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 </style>
