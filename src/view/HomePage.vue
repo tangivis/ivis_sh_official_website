@@ -83,51 +83,32 @@
     <div id="customer" class="container-fuild">
       <div class="container customer-container">
         <p class="customer-title text-center">漠版旬游京骄敏</p>
-        <swiper
-          class="swiper-container customer-swiper hidden-xs"
-          :modules="modules"
-          :slides-per-view="1"
-          :space-between="0"
-          navigation
-          loop
-          autoplay
-          :pagination="{
-            clickable: true
-          }"
-        >
-          <swiper-slide
-            class="swiper-slide customer-block"
-            v-for="(item, index) in customerList"
-            :key="index"
+        <!-- 固定背景的包裹层 -->
+        <div class="customer-wrapper">
+          <swiper
+            class="swiper-container customer-swiper hidden-xs"
+            :modules="modules"
+            :slides-per-view="1"
+            :space-between="0"
+            navigation
+            loop
+            autoplay
+            :pagination="{ clickable: true }"
           >
-            <div class="customer-logo">
-              <img class="center-block" :src="item.logo" alt="logo" />
-            </div>
-
-            <div class="customer-content1">
-              <small>{{ item.content }}</small>
-            </div>
-            <div class="customer-content2">{{ item.title }}</div>
-          </swiper-slide>
-        </swiper>
-
-        <div class="row visible-xs customer-block">
-          <div
-            class="col-xs-12"
-            v-for="(item, index) in customerList"
-            :key="index"
-          >
-            <div class="customer-logo">
-              <img class="center-block" :src="item.logo" alt="logo" />
-            </div>
-
-            <div class="customer-content1">
-              <small>{{ item.content }}</small>
-            </div>
-            <div class="customer-content2">
-              <small>{{ item.title }}</small>
-            </div>
-          </div>
+            <swiper-slide
+              class="swiper-slide customer-block"
+              v-for="(item, index) in customerList"
+              :key="index"
+            >
+              <div class="customer-logo">
+                <img class="center-block" :src="item.logo" alt="logo" />
+              </div>
+              <div class="customer-content1">
+                <small>{{ item.content }}</small>
+              </div>
+              <div class="customer-content2">{{ item.title }}</div>
+            </swiper-slide>
+          </swiper>
         </div>
       </div>
     </div>
@@ -172,7 +153,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
-import 'swiper/css/lazy'
 import 'swiper/css/autoplay'
 
 import banner1 from '@/assets/img/banner1.png'
@@ -215,35 +195,35 @@ const modules = [Navigation, Pagination, Scrollbar, A11y, Lazy, Autoplay]
 
 const customerList = [
   {
-    logo: logo_hp,
+    logo: ivisjp_logo,
     title:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
     content:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
   },
   {
-    logo: logo_kk,
+    logo: ivisjp_logo,
     title:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
     content:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
   },
   {
-    logo: logo_toyota,
+    logo: ivisjp_logo,
     title:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
     content:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
   },
   {
-    logo: logo_kk,
+    logo: ivisjp_logo,
     title:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
     content:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。'
   },
   {
-    logo: logo_hp,
+    logo: ivisjp_logo,
     title:
       '您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素。',
     content:
@@ -413,18 +393,23 @@ onMounted(() => {
   margin: 0 0 30px;
 }
 
-#customer .customer-block {
-  background: #fff;
-  padding: 30px 80px;
+/* 添加一个固定背景的容器 */
+.customer-wrapper {
+  background: #fff;       /* 固定白色背景 */
+  padding: 30px 80px;     /* 内边距，根据需要调整 */
+  min-height: 200px;      /* 设置最小高度，保证背景显示 */
+}
+
+/* 移除客户评价 slide 上的背景设置 */
+#customer .swiper-slide.customer-block,
+#customer .swiper-slide-duplicate.customer-block {
+  background: transparent !important;
+  /* 可保留内边距设定如果需要，不过通常由外层容器来控制 */
+  padding: 0;
 }
 
 #customer .customer-logo img {
   height: 94px;
-}
-
-#customer .customer-yh img {
-  width: 34px;
-  height: 34px;
 }
 
 #customer .customer-content1 {
@@ -523,11 +508,11 @@ onMounted(() => {
     margin: 10px;
   }
 
-  #customer {
+  /* #customer {
     padding: 30px 0;
     box-sizing: border-box;
     background: #fff;
-  }
+  } */
 
   #customer .customer-title {
     font-size: 16px;
