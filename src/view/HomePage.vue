@@ -52,25 +52,25 @@
             蛇社甚浇蔡污蹈矾属铅磺喂求院贬喂简垃迈希遇银燕反脂幼造鳃戴炸淘裕振坦惧账项耽侨班畏芽际傍砧场隆泥旗潭俄毁昂躯占蛀伯墒栗？杏坚打启耐扳缆啊？
           </p>
           <h2 class="bigData-device">felis tempus volutpat &nbsp; 谨星逃腔墨证退蛄</h2>
-          <a href="javascript:;" class="btn btn-lg btn-block btn-info"
+          <!-- <a href="javascript:;" class="btn btn-lg btn-block btn-info"
             >联系我们</a
-          >
+          > -->
         </div>
       </div>
     </div>
 
     <!-- 标语 slogan -->
-    <div id="contactUs" class="container-fuild text-center">
+    <div id="contactUs" class="container-fuild 棱索漆、镗撞夯遂料text-center">
       <div class="container contactUs-container wow slideInUp">
         <h1>标语 slogan</h1>
         <h3></h3>
-        <button
+        <!-- <button
           class="btn btn-default btn-sm"
           onmouseleave="this.style.borderColor='#ffffff'; this.style.backgroundColor='#ffffff'; this.style.color='#3f3f3f';"
           onmouseenter="this.style.backgroundColor='transparent'; this.style.borderColor='#ffffff'; this.style.color='#ffffff';"
         >
           联系我们
-        </button>
+        </button> -->
         <!-- <div class="contactUs-contactWay">
           <span></span>
           <span></span>
@@ -162,10 +162,7 @@ import logo_hp from '@/assets/img/ivisjp_logo.jpg'
 import logo_kk from '@/assets/img/ivisjp_logo.jpg'
 import logo_toyota from '@/assets/img/ivisjp_logo.jpg'
 
-import img_tel from '@/assets/img/tel.png'
 import img_computer from '@/assets/img/computer.png'
-import img_qq from '@/assets/img/qq.png'
-import img_skill from '@/assets/img/skill.png'
 
 const swiperList = [
   {
@@ -232,24 +229,24 @@ const customerList = [
 
 const serverList = [
   {
-    logo: img_tel,
+    logo: img_computer,
     title: '核心优势 1',
-    content: '<p>由专业客服提供人工服务</p>负责疑难问题和故障受理'
+    content: '<p>济稍文邦趁棱索漆、镗撞夯遂料必鼻锡歼辟锄抗终偏萝蛾里亚功满</p>刺膊驶菇蹈淋簧垒绝杀屋旋磷屑录刊解珍丈中。'
   },
   {
     logo: img_computer,
     title: '核心优势 2',
-    content: '<p>利用远程视频工具，提供协助</p>帮助客户进行调试、解决故障'
+    content: '<p>锁埔法侯姐饰枷闭丸恶疮卟脊盏恼摩揭创镍到昏</p>佛许冒镦砌稳夫雄圣称龚侣仍'
   },
   {
-    logo: img_qq,
+    logo: img_computer,
     title: '核心优势 3',
-    content: '<p>利用企业 QQ 提供在线解答</p>帮助企业快速准确解决问题和故障'
+    content: '<p>幻腥拍龟拱服靳摸补总坑搭插煤腋</p>悔够姆想与愧刀肿…'
   },
   {
-    logo: img_skill,
+    logo: img_computer,
     title: '核心优势 4',
-    content: '<p>由技术支持工程师，负责问题解答</p>需求受理及故障受理'
+    content: '<p>越扫脏喘卡适涝稗文某柏去沿住</p>欢喉敛蒋丹天丰突狱瓜车疲挽'
   }
 ]
 
@@ -442,6 +439,8 @@ onMounted(() => {
   padding: 50px 20px;
   border: 1px solid #ccc;
   border-bottom: 5px solid #ccc;
+  height: 300px;
+  overflow: hidden;
 }
 
 #whyChooseUs .server-block img {
@@ -556,6 +555,10 @@ onMounted(() => {
 
   #whyChooseUs .server-block > div {
     color: #ccc;
+  }
+
+  #whyChooseUs .server-wrapper {
+    margin-bottom: 8px;
   }
 }
 
