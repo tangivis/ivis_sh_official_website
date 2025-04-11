@@ -34,11 +34,7 @@
     <!-- 手机导航 -->
     <div class="header-nav-m container-fuild visible-xs">
       <div class="header-nav-m-logo">
-        <img
-          class="center-block"
-          src="@/assets/img/ivisjp_logo.jpg"
-          alt="logo"
-        />
+        <img class="center-block" src="@/assets/img/ivisjp_logo.jpg" alt="logo" />
       </div>
       <!-- 导航栏 -->
       <div class="header-nav-m-menu text-center">
@@ -57,14 +53,12 @@
             v-for="(item, index) in navList"
             :key="index"
             :class="index == navIndex ? 'active' : ''"
-            @click="navClick(index, item.name)"
+            @click="navClick(index, item.name, item.path)"
             data-toggle="collapse"
             data-target="#menu"
           >
-            <router-link :to="item.path">
-              {{ item.name }}
-              <i class="underline"></i>
-            </router-link>
+            {{ item.name }}
+            <i class="underline"></i>
           </li>
         </ul>
       </div>
@@ -74,13 +68,13 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
-const phone = import.meta.env.VITE_APP_PHONE
-const email = import.meta.env.VITE_APP_EMAIL
-const navIndex = ref('')
-navIndex.value = sessionStorage.getItem('navIndex')
-  ? sessionStorage.getItem('navIndex')
-  : 0
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const navIndex = ref(sessionStorage.getItem('navIndex') ?? 0)
 const menuName = ref('首页')
+
 const menuClass = ref('glyphicon glyphicon-menu-down')
 const navList = [
   {
@@ -123,17 +117,32 @@ const navList = [
     children: []
   }
 ]
-function navClick(index, name) {
+
+// function navClick(index, name) {
+//   navIndex.value = index
+//   sessionStorage.setItem('navIndex', index)
+//   menuName.value = name
+// }
+// function menuClick() {
+//   if (menuClass.value == 'glyphicon glyphicon-menu-down') {
+//     menuClass.value = 'glyphicon glyphicon-menu-up'
+//   } else {
+//     menuClass.value = 'glyphicon glyphicon-menu-down'
+//   }
+// }
+
+function navClick(index, name, path) {
   navIndex.value = index
   sessionStorage.setItem('navIndex', index)
   menuName.value = name
+  router.push(path)
 }
+
 function menuClick() {
-  if (menuClass.value == 'glyphicon glyphicon-menu-down') {
-    menuClass.value = 'glyphicon glyphicon-menu-up'
-  } else {
-    menuClass.value = 'glyphicon glyphicon-menu-down'
-  }
+  menuClass.value =
+    menuClass.value === 'glyphicon glyphicon-menu-down'
+      ? 'glyphicon glyphicon-menu-up'
+      : 'glyphicon glyphicon-menu-down'
 }
 </script>
 
@@ -366,4 +375,3 @@ function menuClick() {
   }
 }
 </style>
-
